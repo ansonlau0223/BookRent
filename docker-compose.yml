@@ -1,0 +1,18 @@
+services:
+  db:
+    image: postgres:16
+
+    environment:
+      POSTGRES_DB: bookrent
+      POSTGRES_USER: bookrent
+      POSTGRES_PASSWORD: bookrent
+
+    ports:
+      - "5432:5432"
+
+    volumes:
+      - bookrent_data:/var/lib/postgresql/data
+
+
+volumes:
+  bookrent_data:
